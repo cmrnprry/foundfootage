@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 0c316e3fa99b0564c9a8b93b031072bd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inkJSONAsset: {fileID: 4900000, guid: f6d4a8aca3e55234ba2131d0832638d6, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
