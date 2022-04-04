@@ -55,8 +55,8 @@ Which do you wanna do? #friend
 Really that one? #friend 
 Okay, fine. #friend 
 So for that one I need a doll, some candles and... a knife? #friend 
-One second I'll be right back. #friend #background: black
-Okay, got it. #friend #background: desk #item: doll #item: candles #item: knife
+One second I'll be right back. #friend #background:black
+Okay, got it. #friend #background:desk #item:doll #item:candle #item:knife
 So now... #friend 
 Hm... #friend 
 I have to make a circle of candles, then sit across from the doll. #friend
@@ -104,8 +104,8 @@ Like I said, this is all fake anyway. #friend
     -> HideSeek.GameStart
 
 = GameStart
-- One second. I'm gonna put my phone down while I set up. #friend #background: black
-Okay done! #friend #background: candlelitdoll
+- One second. I'm gonna put my phone down while I set up. #friend #background:black
+Okay done! #friend #background:candlelitdoll
 Spooky, right?#friend
 Okay I'm gonna close my eyes and start now, alright? #friend
 You'll be able to see if anything happens. #friend
@@ -120,10 +120,10 @@ Yupp! #friend
 I want to play hide and seek. #friend
 I am it first. #friend
 If you want to play, I offer this doll as your body. #friend
-Will you play with me? #friend #SFX: creepy whispering
+Will you play with me? #friend #SFX: whispering
 Stop messing with me, dude. I know that's just you. #friend
 I will start count. You have 30 seconds. #friend
-30, 29, 28, 27, 26... #friend #Animation:  doll getting up and running #SFX: footsetps
+30, 29, 28, 27, 26... #friend #Anim:dollleave #SFX:light_footsetps
 5, 4, 3, 2, 1. #friend
 Ready or not, here I- #friend
 Oh fuck. #friend
@@ -145,7 +145,7 @@ What the- how?? Are you messing with me? #friend
 *[no! check the vod]
     The vod- #friend
     I don't believe you. #friend
-    I'm going to do it just to humor you. #friend #background: black
+    I'm going to do it just to humor you. #friend #background:black
     Stop messing with me, dude. I know that's just you. #PhoneAudio
     I will start count. You have 30 seconds. #PhoneAudio
     What the actula fuck?! #friend
@@ -170,13 +170,13 @@ What the- how?? Are you messing with me? #friend
 
 = YouGiveUp
 You give up? #other SFX: whispering
-Are you sure? you barely tried. #other SFX: whispering
+Are you sure? you barely tried. #other SFX:whispering
 Guys, stop this isn't funny. #friend
-If you want it to stop, you better come find me. #other SFX: whispering
-Come find me. #other SFX: whispering
-Come find me. #other SFX: whispering
-Come find me. #other SFX: whispering
-You'll regret it if you don't. #other #SFX: giggling
+If you want it to stop, you better come find me. #other SFX:whispering
+Come find me. #other SFX:whispering
+Come find me. #other SFX:whispering
+Come find me. #other SFX:whispering
+You'll regret it if you don't. #other #SFX:giggling
 
 *[what the fuck was that]
 *[you're fucked lmao]
@@ -205,7 +205,7 @@ or I'm the most unlucky person to ever have played hide and seek. #friend
 
 
 === SearchForDoll
-Now if I were a haunted doll, where would I hide? #friend #Backgound:hallway
+Now if I were a haunted doll, where would I hide? #friend #Backgound:bedroom
 *[bathroom]
     Ew, where even would it hide? #friend
     In the tub? #friend
@@ -219,7 +219,7 @@ Now if I were a haunted doll, where would I hide? #friend #Backgound:hallway
 *[under the couch...?]
     That's so obvious. #friend
     Not even sure the doll is small enough to fit under there. #friend
-    We can check anyway, lots of places to hide there I think. #friend #background: livingroom
+    We can check anyway, lots of places to hide there I think. #friend #background:livingroom
     -> SearchForDoll.LivingRoom
 
 *[in a  cabinet]
@@ -240,8 +240,8 @@ Now if I were a haunted doll, where would I hide? #friend #Backgound:hallway
 ~ SearchedIn += (Kitchen)
 Do you see anything? #friend
 *[in the pantry]
-	Do you think? #friend #background: cabinet_closed
-	Is it even strong enough to… #friend #background: cabinet_open #item: doll
+	Do you think? #friend #background:cabinet_closed
+	Is it even strong enough to… #friend #item:doll
 	Oh shit! #friend
 	-> FoundDollFirst
 	
@@ -267,7 +267,7 @@ See anything? #friend
     This is a cat toy. #friend
     Haha, ya got me. #friend
 
-- Where else do you think? #friend #background: livingroom
+- Where else do you think? #friend #background:livingroom
 *[Behind TV?]
     Mmmm... #friend
     Don't see it. #friend
@@ -310,7 +310,7 @@ See anything? #friend
 = ifcase
 		Okay… #friend
 		God, this is so fucked… #friend
-		I found you! #friend #item: doll_stabbed
+		I found you! #friend #item:doll_stabbed
 		-> Hide1
 = elsecase
 Oh right, the rules. #friend
@@ -318,14 +318,14 @@ It says, It says "Declare out loud that you found the doll, then stab it. You th
 "The game ends if either the doll finds you OR you manage to stay hidden long enough for the spirit to get bored." #friend
 Okay… #friend
 God, this is so fucked… #friend
-I found you! #friend #item: doll_stabbed
+I found you! #friend #item:doll_stabbed
 -> Hide1
 
 
 === Hide1 ===
-You found me! You found me! #other #SFX: whispering #item: doll
-You hide, you hide! #other #SFX: whispering
-30, 29, 28, 27.. #other #SFX: whispering
+You found me! You found me! #other #SFX:whispering #item:doll
+You hide, you hide! #other #SFX:whispering
+30, 29, 28, 27.. #other #SFX:whispering
 Okay okay okay okay.  #friend
 Where should I hide? #friend
 *[under bed]
@@ -346,85 +346,85 @@ Where should I hide? #friend
 - What? there's so much stuff under her. #friend
 Probably won't be able to see me with all the junk. #friend
 How long do you think I have to hide for? #friend
-Do you- #friend #SFX: heavy_footsteps
-… #friend #SFX: doorslam
+Do you- #friend #SFX:heavy_footsteps
+… #friend #SFX:doorslam
 
 Come out, come outttt #other
 Shit, shit. #friend
-It's here. Can you see? #friend #background: bedroom #anim: doll_walk
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk
 *[it's just walking]
 *[it checked the closet]
 	Maybe I should move under there after it leaves? #friend
 *[...]
 	I hate you. #friend
 
-… #friend #background: closet #SFX: door_slam
+… #friend #background: closet #SFX:door_slam
 Is it gone? #friend
 …  #friend
 I think it's gone. #friend
 Should I move to the closet? #friend
 It already checked there so… #friend
 *[yes]
-	Check to make sure the coast is clear, for me.  #friend #background: bedroom
+	Check to make sure the coast is clear, for me.  #friend #background:bedroom
 *[no]
 	Mmm… okay… #friend
 	-> Hide1.StayCloset
 
 - Is it clear? #friend
 *[yes]
-    Okay, I'm gonna... #friend #SFX: lightfootsteps
+    Okay, I'm gonna... #friend #SFX:light_footsteps
 *[no]
     Mmm… okay… #friend
 	-> Hide1.StayCloset
 	
-- Now it really shouldn't find me. #friens #background: closet
+- Now it really shouldn't find me. #friens #background:closet
 -> Hide1.StayCloset
 
 = Hide_Closet
 ~ hideFirst = "closet"
-How long do you think I have to hide for? #friend #background: closet
+How long do you think I have to hide for? #friend #background:closet
 Should we change hiding spots at some point? #friend
 *[no]
 *[isn't that like against hide and seek?]
 *[if you want to]
 *[...]
 
-- Yeah probably shouldn't…#friend #SFX: heavy_footsteps
+- Yeah probably shouldn't…#friend #SFX:heavy_footsteps
 … #friend #SFX: doorslam
 Come out, come outttt #other
 Shit, shit. #friend
-It's here. Can you see? #friend #background: bedroom #anim: doll_walk
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk
 *[it's just walking]
 *[it checked under the bed]
 	Maybe I should move under there after it leaves? #friend
 *[...]
 	I hate you. #friend
 
-… #friend #background: closet #SFX: door_slam
+… #friend #background: closet #SFX:door_slam
 Is it gone? #friend
 …  #friend
 I think it's gone. #friend
 Should I move to under the bed? #friend
 It already checked there so… #friend
 *[yes]
-	Check to make sure the coast is clear, for me.  #friend #background: bedroom
+	Check to make sure the coast is clear, for me.  #friend #background:bedroom
 *[no]
 	Mmm… okay… #friend
 	-> Hide1.StayCloset
 
 - Is it clear? #friend
 *[yes]
-    Okay, I'm gonna... #friend #SFX: lightfootsteps
+    Okay, I'm gonna... #friend #SFX:light_footsteps
 *[no]
     Mmm… okay… #friend
 	-> Hide1.StayCloset
 	
-- Now it really shouldn't find me. #friens #background: underbed
+- Now it really shouldn't find me. #friens #background:underbed
 -> Hide1.StayCloset
 
 
 = StayCloset
-AGH! #other #SFX: slam_door
+AGH! #other #SFX:slam_door
 Where are you, where are you? #other
 Not here. Not there. #other
 Where, where, where, WHERE?! #other
@@ -445,7 +445,7 @@ Should I...? Do yo think this is a trick? #friend
 
 - Okay... #friend
 You couldn't find me, so I win! #friend 
-I'm here! #friend #background: bedroom #item: doll
+I'm here! #friend #background:bedroom #item:doll
 Cheater cheater cheater CHEATER! #other
 *[lmao it's so pressed]
 *[...]
@@ -472,9 +472,9 @@ My eyes are closed. #friend
 NO. THEM. #other.
 The stream? Why, they're not- #friend
 Cheater. Cheater. Cheater. CheaterCheaterCheaterCheaterCheaterChe-#other
-Fine! #friend #background: black
+Fine! #friend #background:black
 There happy? #friend
-30. 29. 28. 27... #friend #SFX: footsteps
+30. 29. 28. 27... #friend #SFX:footsteps
 
 ->Seek2
 
@@ -484,7 +484,7 @@ There happy? #friend
 ~ SearchedIn -= (Kitchen)
 ~ SearchedIn -= (Livingroom)
 ~ PlacesLooked = 0
-Where do you think this time? The first time was pretty easy. #friend #background: bedroom
+Where do you think this time? The first time was pretty easy. #friend #background:bedroom
 *[why did you say yes???]
     I panicked. #friend 
     It was like a kid. #friend 
@@ -505,8 +505,8 @@ Where do you think this time? The first time was pretty easy. #friend #backgroun
     You think it just slipped under the bed or something?#friend 
     Might as well check while we're here, right? #friend 
     ~ PlacesLooked += 1
-    Not here... #friend #background: under bed
-    The closet maybe...? #friend #background: closet
+    Not here... #friend #background:underbed
+    The closet maybe...? #friend #background:closet
     Nope. #friend 
     ~ PlacesLooked += 1
     Living room maybe? #friend
@@ -515,7 +515,7 @@ Where do you think this time? The first time was pretty easy. #friend #backgroun
 ->END
 = Kitchen_
 ~ SearchedIn += (Kitchen)
-Let's see... #friend #background: kitchen
+Let's see... #friend #background:kitchen
 A swing and a miss.
 ~ PlacesLooked += 1
  
@@ -555,12 +555,12 @@ Where to next?
 = LivingRoom
 ~ SearchedIn += (Livingroom)
 ~ PlacesLooked += 1
-Under the couch this time maybe? #friend #background: livingroom
+Under the couch this time maybe? #friend #background:livingroom
 It's probably small enough. #friend
 I'm going to stick my phone under there again okay? #friend
-... #friend #background: UnderCouch #item: doll
+... #friend #background:undercouch #item:doll
 *[oh shit! yep it's there]
-    Really? #friend #background: livingroom
+    Really? #friend #background:livingroom
     Lemme grab it! #friend
     -> FoundDoll2
 *[nope]
@@ -572,8 +572,8 @@ It's litterally right there, why are you like this? #friend
 
 
 = Bathroom_
-Could only really be in the tub, right? #friend #background: bathroom
-Annnnd nothing. #friend  #SFX: curtain
+Could only really be in the tub, right? #friend #background:bathroom
+Annnnd nothing. #friend  #SFX:curtain
 ~ SearchedIn += (Bathroom)
 ~ PlacesLooked += 1
 
@@ -613,8 +613,8 @@ Annnnd nothing. #friend  #SFX: curtain
     -> FoundDoll2
     }
     
-    Not here... #friend #background: under bed
-    The closet maybe...? #friend #background: closet
+    Not here... #friend #background:underbed
+    The closet maybe...? #friend #background:closet
     Nope. #friend 
     ~ PlacesLooked += 1
     
@@ -630,7 +630,7 @@ Annnnd nothing. #friend  #SFX: curtain
 === FoundDoll2 ===
 {
 - PlacesLooked < 3:
-    I found you! #friend #item: doll_stabbed
+    I found you! #friend #item:doll_stabbed
     AGHAGHAGJUHGVFDS #other
     Stop stop STOP STOP. #other
     Why am I not winning??? #other
@@ -667,7 +667,7 @@ It's counting so fast, shit. #friend
 
 ->Hide2.Bathroom_
 = Bathroom_
-It's really fucking mad. #friend #background: showe_curtains
+It's really fucking mad. #friend #background:shower_curtains
 Should I have like pretended to not find it? #friend
 *[idk if that would have been better]
 *[maybe]
@@ -710,29 +710,29 @@ OH GOD. #friend
 - Right, right. Sorry. #friend
 I'm just freaking out a bit. #friend
 Possibly murderous doll and all... #friend
-WHat if- #friend #SFX: doorBanging
-... #friend #SFX: doorBanging
+WHat if- #friend #SFX:doorBanging
+... #friend #SFX:doorBanging
 Knock Knock Knock Knock #other 
 I know you're there. #other
-Open up open up #other #SFX: doorBanging
+Open up open up #other #SFX:doorBanging
 oh fuck... #friend
-I FOUND YOU! #other #SFX: doorslam
+I FOUND YOU! #other #SFX:doorslam
 ... #other
 ... #friend
-Here? #other #SFX: shuffling 
+Here? #other #SFX:shuffling 
 UGH WHERE? #other
 Come out COME OUT #other
 *[maybe it'll just leave..?]
 *[piss yourself yet?]
 *[...]
 
-- I will find you... #other #SFX: footsteps #SFX:doorslam
+- I will find you... #other #SFX:footsteps #SFX:doorslam
 ... #friend
 do you think it's gone...? #friend
 *[just stay put]
 *[poke the phone out]
     Okay, okay. #friend
-    See anything? #friend #background:batheroom #item: doll
+    See anything? #friend #background:batheroom #item:doll
     ->Hide2.Died
 *[...]
 
@@ -764,7 +764,7 @@ You WIN #other
 Come out come out come out #other
 I give UP #other
 Wish me luck... #friend 
-You couldn't find me, so I win! #friend #SFX: curtain #background:bathroom #item: doll
+You couldn't find me, so I win! #friend #SFX:curtain #background:bathroom #item:doll
 S-so now you have to leave. #friend
 That was- was the deal. #friend
 Count. #other
@@ -787,25 +787,25 @@ Now. COUNT. #other
 -> Seek3
 
 = UnderBed
-It's really fucking mad. #friend #background: underbed
+It's really fucking mad. #friend #background:underbed
 Should I have like pretended to not find it? #friend
 *[idk if that would have been better]
 *[maybe]
 *[...]
 
 - Well.. #friend
-Let's just hope it doesn't find me. #friend #SFX: heavy_footsetps
+Let's just hope it doesn't find me. #friend #SFX:heavy_footsetps
 ... #friend
 I know you're here, I know where you areeee #other
-Right here, right hereeee #other #SFX: doorslam
-No NO NO. #other #SFX: doorslam
+Right here, right hereeee #other #SFX:doorslam
+No NO NO. #other #SFX:doorslam
 ... #friend
 Should I switch again? Do you think it's gone?#friend
 *[stay]
 *[ash be QUIET]
 *[...]
 
-- I'm sticking my phone out, okay? #friend #background:bedroom #item: doll
+- I'm sticking my phone out, okay? #friend #background:bedroom #item:doll
 *[fuck]
 ->Hide2.Died
 *[...]
@@ -827,17 +827,17 @@ Should I have like pretended to not find it? #friend
 *[...]
 
 - Well.. #friend
-Let's just hope it doesn't find me. #friend #SFX: heavy_footsetps
+Let's just hope it doesn't find me. #friend #SFX:heavy_footsetps
 ... #friend
 ->Hide2.Died
 
 
 = Died
 I know you're here, I know where you areeee #other
-Right here, right hereeee #other #item: doll
+Right here, right hereeee #other #item:doll
 I. #other
 Found. #other
-You. #other #SFX: laughing
+You. #other #SFX:laughing
 ->END
 
 
@@ -847,7 +847,7 @@ How much longer do I have to play? #friend
 Until. #other
 I. #other
 Say. #other 
-So. #other #SFX: laughing
+So. #other #SFX:laughing
 I don't wanna play anymore. #friend
 Toooooooo BAD. #other
 Now COUNT #other
@@ -861,7 +861,7 @@ Game over. #friend
 I'm done. #friend
 No more! #friend
 Please... #friend
-I warned youuuu #other #SFX: laughing
+I warned youuuu #other #SFX:laughing
 ->END
 
 //it is in bedroom
@@ -871,7 +871,7 @@ I warned youuuu #other #SFX: laughing
 ~ SearchedIn -= (Kitchen)
 ~ SearchedIn -= (Livingroom)
 ~ SearchedIn -= (Bathroom)
-30. 29. 28. 27. 26. 25... #friend #background:black #SFX: footsetps
+30. 29. 28. 27. 26. 25... #friend #background:black #SFX:footsetps
 Where to, do ya think?
 *[...]
     To the kitchen I suppose. #friend
@@ -907,12 +907,12 @@ Not here.
     -> Seek3.livingroom
 
 = Bedroom
-... #friend #bedroom #item: doll
+... #friend #bedroom #item:doll
 *[did it even try?]
 *[????]
 *[...]
 
-- I... found you? #friend #item: doll_stabbed
+- I... found you? #friend #item:doll_stabbed
 -> Found3
 
 = livingroom
@@ -938,7 +938,7 @@ Not here.
 === Found3
 {
 - PlacesLooked > 2:
-    LOOSER LOOSER! #other  #item: doll
+    LOOSER LOOSER! #other  #item:doll
     Get READY #other
 }
 
@@ -949,11 +949,11 @@ Fuck. #friend
 *[bathroom again??]
 *[try to leave]
     Fuck fuck fuck. #friend
-    Why did I not try that before?? #friend #footsteps #door
+    Why did I not try that before?? #friend #SFX:heavy_footsteps #SFX:doorbanging
     -> TryToLeave
 *[...]
 
-- Fuck fuck fuck. #friend #background: underbed
+- Fuck fuck fuck. #friend #background:underbed
 *[it's gonna find you]
 *[you need to get out of here]
 *[...]
@@ -968,20 +968,20 @@ I'll stab it, then run. #friend
 *[i'll say a prayer. good luck]
 *[...]
 
-- Thanks for the words of encouragement. #friend #sfx: whispering
+- Thanks for the words of encouragement. #friend #sfx:whispering
 I know you're hereeee #other
 ... #friend
 Now or never... #friend
-Ahhhh! #friend #background: bedroom #item: stabbeddoll
+Ahhhh! #friend #background: bedroom #item:doll_stabbed
 Hahahaa #other #laughing #whispering
-Run, little rabbit, run. #other #background: door
+Run, little rabbit, run. #other #background:frontdoor
 -> TryToLeave
 
 ->END
 
 ===TryToLeave
 What the- #friend
-It won't open?! #friend #banging
+It won't open?! #friend #SFX:doorbanging
 HELP! HELP! #friend
 SHIT! #friend
 SOMEONE! #friend
@@ -989,7 +989,7 @@ Found youuuu #other #Item: doll
 I thought I told you? #other
 You leave, when I #other
 Say #other
-So #other #SFX: laughing
+So #other #SFX:laughing
 Get ready to countttt #other
 ->END
 

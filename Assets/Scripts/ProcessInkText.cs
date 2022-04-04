@@ -15,9 +15,19 @@ public class ProcessInkText : MonoBehaviour
     private List<string> currentTags = new List<string>();
     private List<Choice> currentChoices = new List<Choice>();
 
+
+    [Header("Art")]
+    public GameObject background;
+    public Transform itemSpawnLayout;
+    public Animator anim;
+
+
     // Buttons for choosing choices
+    [Header("Prefabs")]
     public Transform buttonSpawnLayout;
+    public Transform textSpawnLayout;
     public Button buttonPrefab = null;
+    public TextMeshProUGUI textPrefab = null;
 
     // Ref to ShowNextLine()
     private Coroutine showNextLineRoutine;
@@ -26,15 +36,21 @@ public class ProcessInkText : MonoBehaviour
     private bool makingChoice;
 
     // Text boxes to put text in
+    [Header("TextBoxes")]
     public TextMeshProUGUI friendTextBox;
+    public GameObject friend;
     public TextMeshProUGUI otherTextBox;
+    public GameObject other;
     public TextMeshProUGUI commentsTextBox;
+    public GameObject comments;
 
     // Start is called before the first frame update
     void Start()
     {
         story = new Story(inkJSONAsset.text);
         makingChoice = false;
+        friend.SetActive(false);
+        other.SetActive(false);
         showNextLineRoutine = StartCoroutine(ShowNextLine());
     }
 
@@ -51,10 +67,12 @@ public class ProcessInkText : MonoBehaviour
 
         if (currentTags.Contains("friend"))
         {
+            friend.SetActive(true);
             friendTextBox.text = nextLine;
         }
         if (currentTags.Contains("other"))
         {
+            other.SetActive(true);
             otherTextBox.text = nextLine;
         }
         HandleAVTags();
@@ -62,7 +80,11 @@ public class ProcessInkText : MonoBehaviour
         {
             makingChoice = true;
             CheckChoices();
+
+            friend.SetActive(false);
+            other.SetActive(false);
         }
+
         yield return null;
         showNextLineRoutine = null;
     }
@@ -140,9 +162,14 @@ public class ProcessInkText : MonoBehaviour
                     OnClickChoiceButton(choice);
                 });
             }
+
+            comments.SetActive(true);
+        }
+        else
+        {
+            EndGame();
         }
 
-        EndGame();
     }
 
     /// <summary>
@@ -161,8 +188,11 @@ public class ProcessInkText : MonoBehaviour
     {
         story.ChooseChoiceIndex(choice.index);
 
+        SetChoiceText(choice.text);
+
         RemoveButtons();
         makingChoice = false;
+        comments.SetActive(false);
         StartCoroutine(ShowNextLine());
     }
 
@@ -193,6 +223,14 @@ public class ProcessInkText : MonoBehaviour
         choiceText.text = text;
 
         return choice;
+    }
+
+    private void SetChoiceText(string text)
+    {
+        TextMeshProUGUI choice = Instantiate(textPrefab) as TextMeshProUGUI;
+
+        choice.transform.SetParent(textSpawnLayout, false);
+        choice.text = text;
     }
 
     // Gets next story line if possible
