@@ -33,7 +33,7 @@ Remember when we played Bloody Mary? Kinda like that. #friend
 *[That doesn't sound like the best idea]
     Why, scared? #friend
     I think it'll be fun. #friend
-    Better than just [whatever stream is]. #friend
+    Better than just messing with the shit on my desk. #friend
 
 *[You can't chicken out on me like before!]
     I won't, I promise! #friend
@@ -56,6 +56,9 @@ Really that one? #friend
 Okay, fine. #friend 
 So for that one I need a doll, some candles and... a knife? #friend 
 One second I'll be right back. #friend #background:black
+...
+...
+...
 Okay, got it. #friend #background:desk #item:doll #item:candle #item:knife
 So now... #friend 
 Hm... #friend 
@@ -105,6 +108,9 @@ Like I said, this is all fake anyway. #friend
 
 = GameStart
 - One second. I'm gonna put my phone down while I set up. #friend #background:black
+...
+...
+...
 Okay done! #friend #background:candlelitdoll
 Spooky, right?#friend
 Okay I'm gonna close my eyes and start now, alright? #friend
@@ -123,7 +129,7 @@ If you want to play, I offer this doll as your body. #friend
 Will you play with me? #friend #SFX: whispering
 Stop messing with me, dude. I know that's just you. #friend
 I will start count. You have 30 seconds. #friend
-30, 29, 28, 27, 26... #friend #Anim:dollleave #SFX:light_footsetps
+30, 29, 28, 27, 26... #friend #background:candles #Anim:dollleave #SFX:light_footsetps
 5, 4, 3, 2, 1. #friend
 Ready or not, here I- #friend
 Oh fuck. #friend
@@ -146,9 +152,9 @@ What the- how?? Are you messing with me? #friend
     The vod- #friend
     I don't believe you. #friend
     I'm going to do it just to humor you. #friend #background:black
-    Stop messing with me, dude. I know that's just you. #PhoneAudio
-    I will start count. You have 30 seconds. #PhoneAudio
-    What the actula fuck?! #friend
+    "Stop messing with me, dude. I know that's just you." #friend #SFX: whispering
+    "I will start count. You have 30 seconds." #friend
+    What the actual fuck?! #friend
     This is you and Finn just messing with me right? Right!? #friend
     ...#friend
     ...#friend
@@ -169,13 +175,13 @@ What the- how?? Are you messing with me? #friend
     -> HideSeek.YouGiveUp
 
 = YouGiveUp
-You give up? #other SFX: whispering
-Are you sure? you barely tried. #other SFX:whispering
+You give up? #other #SFX: whispering
+Are you sure? you barely tried. #other #SFX:whispering
 Guys, stop this isn't funny. #friend
-If you want it to stop, you better come find me. #other SFX:whispering
-Come find me. #other SFX:whispering
-Come find me. #other SFX:whispering
-Come find me. #other SFX:whispering
+If you want it to stop, you better come find me. #other #SFX:whispering
+Come find me. #other #SFX:whispering
+Come find me. #other #SFX:whispering
+Come find me. #other #SFX:whispering
 You'll regret it if you don't. #other #SFX:giggling
 
 *[what the fuck was that]
@@ -205,7 +211,7 @@ or I'm the most unlucky person to ever have played hide and seek. #friend
 
 
 === SearchForDoll
-Now if I were a haunted doll, where would I hide? #friend #Backgound:bedroom
+Now if I were a haunted doll, where would I hide? #friend #Backgound:desk
 *[bathroom]
     Ew, where even would it hide? #friend
     In the tub? #friend
@@ -233,23 +239,29 @@ Now if I were a haunted doll, where would I hide? #friend #Backgound:bedroom
     Do you even understand the insanity of this? #friend
     I know you're still watching, so you better start helping! #friend
     ... #friend
-    I'm gonna check the kitchen I guess. #friend
+    I'm gonna check the kitchen I guess. #friend 
     -> SearchForDoll.Kitchen_
     
 = Kitchen_
 ~ SearchedIn += (Kitchen)
-Do you see anything? #friend
+~ PlacesLooked += 1
+Do you see anything? #friend #background:kitchen
 *[in the pantry]
 	Do you think? #friend #background:cabinet_closed
-	Is it even strong enough to… #friend #item:doll
-	Oh shit! #friend
+	Is it even strong enough to… #friend 
+	Oh shit! #friend #background:cabinet_open #item:doll
 	-> FoundDollFirst
-	
+*[...]
+    ....#friend
+    So helpful. #friend
+    Only searching around for a HAUNTED DOLL. #friend
+    NO BIGGIE.  #friend
+    -> SearchForDoll.LivingRoom
 
 = LivingRoom
 ~ SearchedIn += (Livingroom)
 ~ PlacesLooked += 1
-Not many places it could be. #friend
+Not many places it could be. #friend background:livingroom
 I'm going to stick my phone under the couch, tell me if you see anything alright? #friend #background:undercouch
 See anything? #friend
 *[nope]
@@ -467,9 +479,9 @@ But if I find you, that's IT. #friend
 Count. #other
 30. 29. 28. 27... #friend
 NO. #other
-COVER THAT. #other.
+COVER THAT. #other
 My eyes are closed. #friend
-NO. THEM. #other.
+NO. THEM. #other
 The stream? Why, they're not- #friend
 Cheater. Cheater. Cheater. CheaterCheaterCheaterCheaterCheaterChe-#other
 Fine! #friend #background:black
@@ -667,7 +679,7 @@ It's counting so fast, shit. #friend
 
 ->Hide2.Bathroom_
 = Bathroom_
-It's really fucking mad. #friend #background:shower_curtains
+It's really fucking mad. #friend #background:curtains
 Should I have like pretended to not find it? #friend
 *[idk if that would have been better]
 *[maybe]

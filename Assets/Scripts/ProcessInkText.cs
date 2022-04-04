@@ -14,13 +14,17 @@ public class ProcessInkText : MonoBehaviour
     private Story story;
     private List<string> currentTags = new List<string>();
     private List<Choice> currentChoices = new List<Choice>();
-
+    public float wait = 0.15f;
 
     [Header("Art")]
-    public GameObject background;
-    public Transform itemSpawnLayout;
+    public Image background;
+    public Image item;
+    public Image item1;
+    public Image item2;
     public Animator anim;
 
+    public List<Sprite> sprites = new List<Sprite>();
+    public List<Sprite> items = new List<Sprite>();
 
     // Buttons for choosing choices
     [Header("Prefabs")]
@@ -67,13 +71,18 @@ public class ProcessInkText : MonoBehaviour
 
         if (currentTags.Contains("friend"))
         {
+            other.SetActive(false);
             friend.SetActive(true);
-            friendTextBox.text = nextLine;
+            friendTextBox.text = "";
+            
+            yield return StartCoroutine(DisplayWords(nextLine, friendTextBox));
         }
         if (currentTags.Contains("other"))
         {
+            friend.SetActive(false);
             other.SetActive(true);
-            otherTextBox.text = nextLine;
+            otherTextBox.text = "";
+            yield return StartCoroutine(DisplayWords(nextLine, otherTextBox));
         }
         HandleAVTags();
         if (nextLine == "")
@@ -88,6 +97,22 @@ public class ProcessInkText : MonoBehaviour
         yield return null;
         showNextLineRoutine = null;
     }
+
+    IEnumerator DisplayWords(string text, TextMeshProUGUI box)
+    {
+        //string[] words = text.Split(' ');
+        char[] letters = text.ToCharArray();
+
+        foreach (char letter in letters)
+        {
+            box.text += letter;
+            yield return new WaitForSecondsRealtime(wait);
+        }
+
+        yield return null;
+
+    }
+
 
     /// <summary>
     /// Handle tags that change audio or visuals.
@@ -127,6 +152,21 @@ public class ProcessInkText : MonoBehaviour
     private void ShowItem(string item)
     {
         Debug.Log("Showing item " + item);
+        if(item == "knife" || item == "candle")
+        {
+            item1.gameObject.SetActive(true);
+            item2.gameObject.SetActive(true);
+            return;
+        }
+        foreach (Sprite s in items)
+        {
+            if (s.name == item)
+            {
+                this.item.sprite = s;
+                this.item.gameObject.SetActive(true);
+                break;
+            }
+        }
     }
 
     private void PlayAnim(string anim)
@@ -141,7 +181,18 @@ public class ProcessInkText : MonoBehaviour
 
     private void ChangeBackground(string background)
     {
+        this.item.gameObject.SetActive(false);
+        item1.gameObject.SetActive(false);
+        item2.gameObject.SetActive(false);
         Debug.Log("Changing background to " + background);
+        foreach (Sprite s in sprites)
+        {
+            if (s.name == background)
+            {
+                this.background.sprite = s;
+                break;
+            }
+        }
     }
 
     /// <summary>
