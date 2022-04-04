@@ -56,9 +56,9 @@ Really that one? #friend
 Okay, fine. #friend 
 So for that one I need a doll, some candles and... a knife? #friend 
 One second I'll be right back. #friend #background:black
-...
-...
-...
+... #friend 
+... #friend 
+... #friend 
 Okay, got it. #friend #background:desk #item:doll #item:candle #item:knife
 So now... #friend 
 Hm... #friend 
@@ -108,9 +108,9 @@ Like I said, this is all fake anyway. #friend
 
 = GameStart
 - One second. I'm gonna put my phone down while I set up. #friend #background:black
-...
-...
-...
+... #friend 
+... #friend 
+... #friend 
 Okay done! #friend #background:candlelitdoll
 Spooky, right?#friend
 Okay I'm gonna close my eyes and start now, alright? #friend
