@@ -38,6 +38,7 @@ public class ProcessInkText : MonoBehaviour
 
     // Don't detect click when making a choice
     private bool makingChoice;
+    private bool typing = false;
 
     // Text boxes to put text in
     [Header("TextBoxes")]
@@ -84,7 +85,7 @@ public class ProcessInkText : MonoBehaviour
             otherTextBox.text = "";
             yield return StartCoroutine(DisplayWords(nextLine, otherTextBox));
         }
-        HandleAVTags();
+        yield return StartCoroutine(HandleAVTags());
         if (nextLine == "")
         {
             makingChoice = true;
@@ -100,6 +101,7 @@ public class ProcessInkText : MonoBehaviour
 
     IEnumerator DisplayWords(string text, TextMeshProUGUI box)
     {
+        typing = true;
         //string[] words = text.Split(' ');
         char[] letters = text.ToCharArray();
 
@@ -110,14 +112,14 @@ public class ProcessInkText : MonoBehaviour
         }
 
         yield return null;
-
+        typing = false;
     }
 
 
     /// <summary>
     /// Handle tags that change audio or visuals.
     /// </summary>
-    private void HandleAVTags()
+    private IEnumerator HandleAVTags()
     {
         string[] tagArr;
         foreach (string tag in currentTags)
@@ -126,6 +128,8 @@ public class ProcessInkText : MonoBehaviour
             {
                 tagArr = tag.Split(':');
                 string bg = tagArr[1];
+                anim.SetTrigger("Fade");
+                yield return new WaitForSecondsRealtime(1f);
                 ChangeBackground(bg);
             }
             if (tag.StartsWith("SFX"))
@@ -144,6 +148,7 @@ public class ProcessInkText : MonoBehaviour
             {
                 tagArr = tag.Split(':');
                 string item = tagArr[1];
+               // yield return new WaitForSecondsRealtime(1f);
                 ShowItem(item);
             }
         }
@@ -181,6 +186,7 @@ public class ProcessInkText : MonoBehaviour
 
     private void ChangeBackground(string background)
     {
+        
         this.item.gameObject.SetActive(false);
         item1.gameObject.SetActive(false);
         item2.gameObject.SetActive(false);
@@ -281,6 +287,7 @@ public class ProcessInkText : MonoBehaviour
         TextMeshProUGUI choice = Instantiate(textPrefab) as TextMeshProUGUI;
 
         choice.transform.SetParent(textSpawnLayout, false);
+        choice.transform.SetAsFirstSibling();
         choice.text = text;
     }
 
@@ -293,7 +300,7 @@ public class ProcessInkText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !makingChoice)
+        if (Input.GetMouseButtonDown(0) && !makingChoice && !typing)
         {
             if (showNextLineRoutine == null)
             {

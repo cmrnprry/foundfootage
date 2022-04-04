@@ -6,7 +6,6 @@ VAR hideFirst = ""
 LIST SearchedIn = Livingroom, Bathroom, Kitchen, Bedroom_
 LIST LiedAbout = UnderCouch
 
-#background: default
 Ugh... #friend 
 
 #friend
@@ -55,10 +54,7 @@ Which do you wanna do? #friend
 Really that one? #friend 
 Okay, fine. #friend 
 So for that one I need a doll, some candles and... a knife? #friend 
-One second I'll be right back. #friend #background:black
-... #friend 
-... #friend 
-... #friend 
+One second I'll be right back. #friend
 Okay, got it. #friend #background:desk #item:doll #item:candle #item:knife
 So now... #friend 
 Hm... #friend 
@@ -108,9 +104,6 @@ Like I said, this is all fake anyway. #friend
 
 = GameStart
 - One second. I'm gonna put my phone down while I set up. #friend #background:black
-... #friend 
-... #friend 
-... #friend 
 Okay done! #friend #background:candlelitdoll
 Spooky, right?#friend
 Okay I'm gonna close my eyes and start now, alright? #friend
@@ -361,16 +354,16 @@ How long do you think I have to hide for? #friend
 Do you- #friend #SFX:heavy_footsteps
 … #friend #SFX:doorslam
 
-Come out, come outttt #other
+Come out, come outttt #other #dollfeet
 Shit, shit. #friend
-It's here. Can you see? #friend #background:bedroom #anim:doll_walk
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll
 *[it's just walking]
 *[it checked the closet]
 	Maybe I should move under there after it leaves? #friend
 *[...]
 	I hate you. #friend
 
-… #friend #background: closet #SFX:door_slam
+… #friend #background:underbed #SFX:door_slam
 Is it gone? #friend
 …  #friend
 I think it's gone. #friend
@@ -405,14 +398,14 @@ Should we change hiding spots at some point? #friend
 … #friend #SFX: doorslam
 Come out, come outttt #other
 Shit, shit. #friend
-It's here. Can you see? #friend #background:bedroom #anim:doll_walk
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll
 *[it's just walking]
 *[it checked under the bed]
 	Maybe I should move under there after it leaves? #friend
 *[...]
 	I hate you. #friend
 
-… #friend #background: closet #SFX:door_slam
+… #friend #background:closet #SFX:door_slam
 Is it gone? #friend
 …  #friend
 I think it's gone. #friend
@@ -517,7 +510,7 @@ Where do you think this time? The first time was pretty easy. #friend #backgroun
     You think it just slipped under the bed or something?#friend 
     Might as well check while we're here, right? #friend 
     ~ PlacesLooked += 1
-    Not here... #friend #background:underbed
+    Not here... #friend #background:underbed_look
     The closet maybe...? #friend #background:closet
     Nope. #friend 
     ~ PlacesLooked += 1
@@ -625,7 +618,7 @@ Annnnd nothing. #friend  #SFX:curtain
     -> FoundDoll2
     }
     
-    Not here... #friend #background:underbed
+    Not here... #friend #background:underbed_look
     The closet maybe...? #friend #background:closet
     Nope. #friend 
     ~ PlacesLooked += 1
