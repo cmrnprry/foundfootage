@@ -75,7 +75,7 @@ public class ProcessInkText : MonoBehaviour
             other.SetActive(false);
             friend.SetActive(true);
             friendTextBox.text = "";
-            
+
             yield return StartCoroutine(DisplayWords(nextLine, friendTextBox));
         }
         if (currentTags.Contains("other"))
@@ -148,7 +148,7 @@ public class ProcessInkText : MonoBehaviour
             {
                 tagArr = tag.Split(':');
                 string item = tagArr[1];
-               // yield return new WaitForSecondsRealtime(1f);
+                // yield return new WaitForSecondsRealtime(1f);
                 ShowItem(item);
             }
         }
@@ -157,7 +157,7 @@ public class ProcessInkText : MonoBehaviour
     private void ShowItem(string item)
     {
         Debug.Log("Showing item " + item);
-        if(item == "knife" || item == "candle")
+        if (item == "knife" || item == "candle")
         {
             item1.gameObject.SetActive(true);
             item2.gameObject.SetActive(true);
@@ -186,7 +186,7 @@ public class ProcessInkText : MonoBehaviour
 
     private void ChangeBackground(string background)
     {
-        
+
         this.item.gameObject.SetActive(false);
         item1.gameObject.SetActive(false);
         item2.gameObject.SetActive(false);
@@ -288,7 +288,7 @@ public class ProcessInkText : MonoBehaviour
 
         choice.transform.SetParent(textSpawnLayout, false);
         choice.transform.SetAsFirstSibling();
-        choice.text = text;
+        choice.text = "You: " + text;
     }
 
     // Gets next story line if possible
