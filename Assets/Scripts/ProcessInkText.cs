@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class ProcessInkText : MonoBehaviour
 {
@@ -49,9 +50,25 @@ public class ProcessInkText : MonoBehaviour
     public TextMeshProUGUI commentsTextBox;
     public GameObject comments;
 
+    // Fading in to/from black
+    public Image fade;
+    public float fadeTime;
+
+    // Audio
+    public BGMHandler bgmHandler;
+    public SFXHandler sfxHandler;
+
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(StartScene());
+    }
+
+    private IEnumerator StartScene()
+    {
+        bgmHandler.FadeInBGM(fadeTime);
+        fade.DOFade(0.0f, fadeTime);
+        yield return new WaitForSecondsRealtime(fadeTime);
         story = new Story(inkJSONAsset.text);
         makingChoice = false;
         friend.SetActive(false);
@@ -181,7 +198,60 @@ public class ProcessInkText : MonoBehaviour
 
     private void PlaySFX(string sfx)
     {
-        Debug.Log("Playing sound " + sfx);
+        if (sfx == "[adultRun]")
+        {
+            sfxHandler.PlayAdultRunSFX();
+        }
+        else if (sfx == "[adultWalk]")
+        {
+            sfxHandler.PlayAdultWalkSFX();
+        }
+        else if (sfx == "[childWalk]")
+        {
+            sfxHandler.PlayChildWalkSFX();
+        }
+        else if (sfx == "[childRun]")
+        {
+            sfxHandler.PlayChildRunSFX();
+        }
+        else if (sfx == "[doorSlam]")
+        {
+            sfxHandler.PlayDoorSlamSFX();
+        }
+        else if (sfx == "[doorCreak]")
+        {
+            sfxHandler.PlayDoorCreakSFX();
+        }
+
+        else if (sfx == "[openShowerCurtain]")
+        {
+            sfxHandler.PlayOpenShowerCurtainSFX();
+        }
+
+        else if (sfx == "[closeShowerCurtain]")
+        {
+            sfxHandler.PlayCloseShowerCurtainSFX();
+        }
+
+        else if (sfx == "[distortedVoice]")
+        {
+            sfxHandler.PlayDistortedVoiceSFX();
+        }
+
+        else if (sfx == "[whispering]")
+        {
+            sfxHandler.PlayWhisperingSFX();
+        }
+
+        else if (sfx == "[giggling]")
+        {
+            sfxHandler.PlayGigglingSFX();
+        }
+
+        else if (sfx == "[shuffling]")
+        {
+            sfxHandler.PlayShufflingSFX();
+        }
     }
 
     private void ChangeBackground(string background)
@@ -300,7 +370,12 @@ public class ProcessInkText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !makingChoice && !typing)
+        
+    }
+
+    public void ClickToProgress()
+    {
+        if (!makingChoice && !typing)
         {
             if (showNextLineRoutine == null)
             {
