@@ -34,9 +34,7 @@ public class MenuController : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
-        StartCoroutine(QuitOut());
-
-        
+        StartCoroutine(QuitOut());       
     }
 
     private IEnumerator QuitOut()
