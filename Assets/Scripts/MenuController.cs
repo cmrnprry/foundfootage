@@ -12,18 +12,6 @@ public class MenuController : MonoBehaviour
     public float fadeTime;
     public GameObject credits;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     /// <summary>
     /// Player clicks start button.
     /// </summary>
@@ -46,6 +34,14 @@ public class MenuController : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
+        StartCoroutine(QuitOut());
+
+        
+    }
+
+    private IEnumerator QuitOut()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
