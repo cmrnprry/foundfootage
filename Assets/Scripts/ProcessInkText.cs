@@ -300,7 +300,12 @@ public class ProcessInkText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !makingChoice && !typing)
+        
+    }
+
+    public void ClickToProgress()
+    {
+        if (!makingChoice && !typing)
         {
             if (showNextLineRoutine == null)
             {
