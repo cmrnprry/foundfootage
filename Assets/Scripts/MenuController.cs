@@ -7,9 +7,7 @@ using DG.Tweening;
 
 public class MenuController : MonoBehaviour
 {
-    public Button startButton;
-    public Button quitButton;
-    public Button creditsButton;
+    public Animator anim;
     public Image fade;
     public float fadeTime;
     public GameObject credits;
@@ -36,6 +34,8 @@ public class MenuController : MonoBehaviour
 
     private IEnumerator FadeToGame()
     {
+        anim.SetTrigger("Toggle");
+        yield return new WaitForSecondsRealtime(1f);
         fade.DOFade(1.0f, fadeTime);
         yield return new WaitForSecondsRealtime(fadeTime);
         SceneManager.LoadScene("Main");
