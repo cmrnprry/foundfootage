@@ -77,7 +77,7 @@ sunshineArk: i love hide n seek !! #comment
 So for that one I need a doll… some candles and... a knife? #friend 
 One second I'll be right back. #friend
 // can we pause here? //
-Okay, got it. #friend #background:desk #item:doll #item:candle #item:knife
+Okay, got it. #friend #background:desk #item:doll_sit #item:candle #item:knife
 fshh: don't like the way that doll is looking at me #comment
 jam: i kinda like it #comment
 samloveskirby: stab it!! #comment
@@ -178,7 +178,8 @@ What was that? Brianna? Are you home?? #friend
 user2342351: who’s brianna? #comment
 fshh: her sister #comment
 sunshineArk: there’s noone here #comment
-I will start count. You have 30 seconds. #friend
+Umm okay… #friend
+I will start counting. You h-have… 30 seconds. #friend
 30, 29, 28, 27, 26... #friend #background:candles #Anim:dollleave #SFX:light_footsteps_quick
 sunshineArk: what the fuck #comment
 username0123: where did it go???? #comment
@@ -187,36 +188,33 @@ cringe: she's dead…. #comment
 5, 4, 3, 2, 1. #friend
 Ready or not, here I- #friend
 Oh fuck. #friend
-It's gone? #friend
+It's… really gone? #friend
 What the- how?? Are you messing with me? #friend
-*[No, it just...]
-    Shit, this has to be a prank, right? You and Finn are just messing with me right? #friend
-    
-    This really isn't funny. #friend
-    You can come out now! #friend
-    You got me, good. #friend
-    -> HideSeek.YouGiveUp
-    
-    
-*[Yeah]
-    Well, haha, you got me. #friend
-    Come out now, I give up. #friend
+
+*[Uhhhh, no...]
+    If this is real then… #friend
+    Shit, I can’t believe this actually worked… #friend
+    This is insane! #friend
+    Where are you, little doll? #friend
+    Come out come out, wherever you areee. #friend
+user2342351: i think i saw her go in a closet #comment
+sunshineArk: nah, i saw the doll go out the door #comment
+    Alright, alright, you got me, little ghost! I give up, I can’t find you! #friend
     -> HideSeek.YouGiveUp
 
 *[no! check the vod]
     The vod- #friend
-    I don't believe you. #friend
-    I'm going to do it just to humor you. #friend #background:black
+    I don't believe you... #friend
+    But, I'll do it just to humor you. #friend #background:black
     "What was that? Brianna? Are you home??" #friend #SFX:distortedvoices_4
     "I will start counting. You have 30 seconds." #friend
     What the actual fuck?! #friend #background:candles
-    This is you and Finn just messing with me right? Right!? #friend 
-    ...#friend
+    You’ve got to be kidding. This can’t be happening. Right!? #friend 
     ...#friend
     ...#friend
     Okay. #friend
     Okay. # friend
-    Well. #friend
+    This is fine. #friend
     Good job, Ash, now we have a haunted doll hiding somewhere in the house. #friend
     aliceinwundebar: <i>link removed</i> says here how to exercise the spirit #comment
     username0123: exorcise*  #comment
@@ -236,7 +234,7 @@ What the- how?? Are you messing with me? #friend
 You give up? #other #SFX:distortedvoices_3
 boostUp77: never #comment
 Are you sure? you barely tried. #other 
-Guys, stop, this isn't funny. #friend
+Stop, this isn't funny. Who is doing this? #friend
 If you want it to stop, you better come find me. #other #SFX:distortedvoices_2
 Come find me. #other 
 Come find me. #other #SFX:distortedvoices_1
@@ -247,8 +245,8 @@ You'll regret it if you don't. #other #SFX:laugh
 *[you're fucked lmao]
 *[...]
 
-- This is real, isn't it? #friend
-It's real. I actually have to... #friend
+- Holy shit, what do I do? #friend
+Hahahaha, I actually have to... #friend
 Ha.. Hahaha... #friend
 HAHAHA! #friend
 lolaBunn: she's lost the plot lmao #comment
@@ -259,7 +257,7 @@ jam: hahaha :-) #comment
 *[...]
 
 - I've either completely lost it, #friend
-or I'm the most unlucky person to ever have played hide and seek. #friend
+or I'm a complete idiot for actually inviting a ghost into my house. #friend
 
 {
     - readEnding:
@@ -277,8 +275,10 @@ aliceinwonderbar: kitchen! #comment
 boostUp77: my place :p #comment
 user39742: click MY profile to see something new ;) #comment
 *[bathroom]
-    Ew, where even would it hide? #friend
+    Ew, where would it even hide? #friend
     In the tub? #friend
+boostUp77: tub sounds nice :) #comment
+sunshineArk: lol it’s worth a shot? #comment
     That's dumb. #friend
     The doors still closed and I know that thing can't reach the knob so, #friend
     probably not there. #friend
@@ -288,18 +288,18 @@ user39742: click MY profile to see something new ;) #comment
     
 *[under the couch...?]
     That's so obvious. #friend
-    Not even sure the doll is small enough to fit under there. #friend
-    We can check anyway, lots of places to hide there I think. #friend #background:livingroom
+   I don’t think the doll is small enough to fit under there, anyway, but I’ll check. #friend
+    Lots of places to hide in the living room. #friend #background:livingroom
     -> SearchForDoll.LivingRoom
 
 *[in a  cabinet]
-    Is it even strong enough to do that? #friend
+    Is it even strong enough to open a cabinet? #friend
     Might as well check I guess. #friend
     To the kitchen, I suppose. #friend
     -> SearchForDoll.Kitchen_
     
 *[...]
-    You're sooooo helpful. #friend
+    Hello???? God, you're sooooo helpful. #friend
     Do you even understand the insanity of this? #friend
     I know you're still watching, so you better start helping! #friend
     ... #friend
@@ -312,11 +312,12 @@ user39742: click MY profile to see something new ;) #comment
 Do you see anything? #friend #background:kitchen
 *[in the pantry]
 	Do you think? #friend #background:cabinet_closed
-	Is it even strong enough to… #friend 
-	Oh shit! #friend #background:cabinet_open #item:doll
+	… #friend 
+	Oh shit! #friend #background:cabinet_open #item:doll_sit
 	-> FoundDollFirst
 *[...]
-    ....#friend
+    ...Are you like dead or something? #friend
+    … #friend 
     So helpful. #friend
     Only searching around for a HAUNTED DOLL. #friend
     NO BIGGIE.  #friend
@@ -344,6 +345,8 @@ toxxicglitter: than's a bot my gut…. #comment
     Lemme just.... #friend
     What the- #friend
     This is a cat toy. #friend
+sunshineArk: pwned #comment
+user2342351: we could’ve told you it wasn’t there #comment
     Haha, ya got me. #friend
 
 - Where else do you think? #friend #background:livingroom
@@ -402,7 +405,7 @@ I found you! #friend #item:doll_stabbed
 
 
 === Hide1 ===
-You found me! You found me! #other #SFX:laugh #item:doll
+You found me! You found me! #other #SFX:laugh #item:doll_stand
 You hide, you hide! #other 
 30, 29, 28, 27.. #other #SFX:distortedvoices_1
 Okay okay okay okay.  #friend
@@ -430,7 +433,7 @@ Do you- #friend #SFX:heavy_footsteps
 
 Come out, come outttt #other #dollfeet
 Shit, shit. #friend
-It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll_stand
 cringe: there she beeeee #comment
 lolaBunn: hun, you need to be quiet #comment
 *[it's just walking]
@@ -445,7 +448,7 @@ Is it gone? #friend
 …  #friend
 I think it's gone. #friend
 Should I move to the closet? #friend
-It already checked there so… #friend
+It already checked in there so I might be safe… #friend
 *[yes]
 	Check to make sure the coast is clear, for me.  #friend #background:bedroom
 *[no]
@@ -475,7 +478,7 @@ Should we change hiding spots at some point? #friend
 … #friend #SFX:door_wood_open
 Come out, come outttt #other #SFX:distortedvoices_4
 Shit, shit. #friend
-It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll
+It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll_stand
 *[it's just walking]
 *[it checked under the bed]
 	Maybe I should move under there after it leaves? #friend
@@ -486,8 +489,8 @@ It's here. Can you see? #friend #background:bedroom #anim:doll_walk #item:doll
 Is it gone? #friend
 …  #friend
 I think it's gone. #friend
-Should I move to under the bed? #friend
-It already checked there so… #friend
+Should I go under the bed? #friend
+It already checked there… I thinkI might have a chance. #friend
 *[yes]
 	Check to make sure the coast is clear, for me.  #friend #background:bedroom
 *[no]
@@ -518,7 +521,7 @@ user2342351: sounds like it #comment
 
 - UGH UGH UGH! #other #SFX:distortedvoices_1
 Fine fine fine FINNNNEEEE #other #SFX:distortedvoices_3
-You win! #other #SFX:distortedvoices_4
+You win! #other
 Come out come out come out COME OUT! #other #SFX:distortedvoices_4
 Should I...? Do yo think this is a trick? #friend
 *[I think that's against the rules....]
@@ -528,7 +531,7 @@ Should I...? Do yo think this is a trick? #friend
 
 - Okay... #friend
 You couldn't find me, so I win! #friend 
-I'm here! #friend #background:bedroom #item:doll
+I'm here! #friend #background:bedroom #item:doll_stand
 Cheater cheater cheater CHEATER! #other #SFX:distortedvoices_1
 *[lmao it's so pressed]
 *[...]
@@ -572,7 +575,7 @@ Where do you think this time? The first time was pretty easy. #friend #backgroun
     I panicked. #friend 
     It was like a kid. #friend 
     Like you would have been able to tell it no. #friend 
-    Let's jus go check the livingroom. #friend 
+    Let's just go check the living room. #friend 
     -> Seek2.LivingRoom
 *[bathroom?]
     I really don't think so. #friend
@@ -641,7 +644,7 @@ Where to next?
 Under the couch this time maybe? #friend #background:livingroom
 It's probably small enough. #friend
 I'm going to stick my phone under there again okay? #friend
-... #friend #background:undercouch #item:doll
+... #friend #background:undercouch #item:doll_sit
 *[oh shit! yep it's there]
     Really? #friend #background:livingroom
     Lemme grab it! #friend
@@ -701,7 +704,7 @@ Annnnd nothing. #friend  #SFX:curtain
     Nope. #friend 
     ~ PlacesLooked += 1
     
-    
+  
      {
     - PlacesLooked > 3:
     -> FoundDoll2
@@ -720,7 +723,7 @@ Annnnd nothing. #friend  #SFX:curtain
     UGH #other
     I will find you find you FIND YOU. #other
     I need to return the favour. #other
-    sunshineArk: what favour…? #comment
+    sunshineArk: what favor…? #comment
     howlsmovingAway: probably nothing good lmao #comment
     I need need need to win. #other
     302928272625- #other
@@ -754,8 +757,8 @@ howlsmovingAway: she's so dead lol #comment
 ->Hide2.Bathroom_
 = Bathroom_
 It's really fucking mad. #friend #background:curtains
-Should I have like pretended to not find it? #friend
-*[idk if that would have been better]
+What could I do? I wasn’t going to let it win! You saw how it was messing with me! #friend
+*[yea idk if that would have been better]
 *[maybe]
 *[...]
 
@@ -774,13 +777,13 @@ That sounded like it was from the bedroom. #friend
 Hopefully the spooky ghost doesn't think to look in the bathroom? #friend
 Hahaha... #friend
 *[ash hush]
-*[at least when you piss yourself in fear, you're in teh right place]
+*[at least when you piss yourself in fear, you're in the right place]
     Gross. #friend
     I'm not- #friend
-    No that's a lie. I'm terrified. #friend
+    No, that's a lie. I'm terrified. #friend
 *[...]
 
-- What do yuo think it meant by "return the favour"? #friend
+- What do you think it meant by "return the favor"? #friend
 *[probably gonna stab ya]
 *[idk]
 
@@ -818,7 +821,7 @@ do you think it's gone...? #friend
 *[just stay put]
 *[poke the phone out]
     Okay, okay. #friend
-    See anything? #friend #background:bathroom #item:doll
+    See anything? #friend #background:bathroom #item:doll_stand
     ->Hide2.Died
 *[...]
 
@@ -833,7 +836,7 @@ It tried to lay a trap..? #friend
 *[...]
 
 - Yeah... #friend
-Hopefully this means, I'll live. #friend
+Hopefully this means I'll live. #friend
 Hahaha... #friend
 *[morbid much?]
     You'd call me crazy if I was anything else. #friend
@@ -842,7 +845,7 @@ Hahaha... #friend
 *[...]
 
 - But okay. #friend
-Just wai it out. #friend
+Just wait it out. #friend
 It'll probably- #friend #SFX:footsteps_heavy
 Fine fineineineineinein #other #SFX:distortedvoices_2
 FINE #other
@@ -850,7 +853,7 @@ You WIN #other
 Come out come out come out #other #SFX:distortedvoices_4
 I give UP #other
 Wish me luck... #friend 
-You couldn't find me, so I win! #friend #SFX:curtain #background:bathroom #item:doll
+You couldn't find me, so I win! #friend #SFX:curtain #background:bathroom #item:doll_stand
 S-so now you have to leave. #friend
 That was- was the deal. #friend
 Count. #other #SFX:distortedvoices_3
@@ -874,7 +877,7 @@ Now. COUNT. #other
 
 = UnderBed
 It's really fucking mad. #friend #background:underbed
-Should I have like pretended to not find it? #friend
+Should I have pretended to not find it? #friend
 *[idk if that would have been better]
 *[maybe]
 *[...]
@@ -891,7 +894,7 @@ Should I switch again? Do you think it's gone?#friend
 *[ash be QUIET]
 *[...]
 
-- I'm sticking my phone out, okay? #friend #background:bedroom #item:doll
+- I'm sticking my phone out, okay? #friend #background:bedroom #item:doll_stand
 *[fuck]
 ->Hide2.Died
 *[...]
@@ -920,7 +923,7 @@ Let's just hope it doesn't find me. #friend #SFX:heavy_footsteps
 
 = Died
 I know you're here, I know where you areeee #other  #SFX:distortedvoices_4
-Right here, right hereeee #other #item:doll
+Right here, right hereeee #other #item:doll_stand
 I. #other
 Found. #other
 You. #other #SFX:laugh
@@ -993,7 +996,7 @@ Not here.
     -> Seek3.livingroom
 
 = Bedroom
-... #friend #bedroom #item:doll
+... #friend #bedroom #item:doll_sit
 *[did it even try?]
 *[????]
 *[...]
@@ -1024,7 +1027,7 @@ Not here.
 === Found3
 {
 - PlacesLooked > 2:
-    LOOSER LOOSER! #other  #item:doll
+    LOOSER LOOSER! #other  #item:doll_stand
     Get READY #other
 }
 
@@ -1071,14 +1074,14 @@ It won't open?! #friend #SFX:door_banging_2
 jam: uh oh #comment
 username0123: try the deadbolt…? #comment
 HELP! HELP! #friend
+sunshineArk: someone should call for help #comment
+boostUp77: You should call <i>me</i>#comment
 SHIT! #friend
 SOMEONE! #friend
-Found youuuu #other #Item:doll
+Found youuuu #other #Item:doll_stand
 I thought I told you? #other #SFX:distortedvoices_3
 You leave, when I #other
 Say #other#SFX:distortedvoices_1
 So #other 
 Get ready to countttt #other #SFX:laugh
 ->END
-
-

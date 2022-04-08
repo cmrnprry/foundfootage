@@ -10173,7 +10173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Live Stream has Ended
+  m_text: END OF VOD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 10e6e14caf8720c4daa64454665ad923, type: 2}
   m_sharedMaterial: {fileID: -1211683744848069421, guid: 10e6e14caf8720c4daa64454665ad923, type: 2}
@@ -15533,8 +15533,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 8ade81ac591de4d46a10957c56cdcea3, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

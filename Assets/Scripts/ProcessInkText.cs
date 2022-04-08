@@ -25,7 +25,7 @@ public class ProcessInkText : MonoBehaviour
     public Animator anim;
 
     public List<Sprite> sprites = new List<Sprite>();
-    public List<Sprite> items = new List<Sprite>();
+    public List<GameObject> items = new List<GameObject>();
 
     // Buttons for choosing choices
     [Header("Prefabs")]
@@ -186,11 +186,10 @@ public class ProcessInkText : MonoBehaviour
             item2.gameObject.SetActive(true);
             return;
         }
-        foreach (Sprite s in items)
+        foreach (GameObject s in items)
         {
             if (s.name == item)
             {
-                this.item.sprite = s;
                 this.item.gameObject.SetActive(true);
                 break;
             }

@@ -40,7 +40,6 @@ public class MenuController : MonoBehaviour
     private IEnumerator QuitOut()
     {
         yield return new WaitForSecondsRealtime(1.5f);
-        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
