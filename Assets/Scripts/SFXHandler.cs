@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SFXHandler : MonoBehaviour
 {
-    public AudioClip adultWalking;
-    public AudioClip adultRunning;
-    public AudioClip childWalking;
-    public AudioClip childRunning;
+    public AudioClip heavyfootsteps;
+    public AudioClip lightfootsteps;
+    public AudioClip lightfootstepsquick;
     public AudioClip doorSlam;
     public AudioClip doorCreak;
-    public AudioClip openShowerCurtain;
-    public AudioClip closeShowerCurtain;
-    public AudioClip distortedVoice;
-    public AudioClip whispering;
+    public AudioClip doorBanging_1;
+    public AudioClip doorBanging_2;
+    public AudioClip ShowerCurtain;
+    public AudioClip distortedVoice_1;
+    public AudioClip distortedVoice_2;
+    public AudioClip distortedVoice_3;
+    public AudioClip distortedVoice_4;
     public AudioClip giggling;
     public AudioClip shuffling;
 
@@ -24,24 +26,19 @@ public class SFXHandler : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    public void PlayAdultWalkSFX()
+    public void PlayHeavySFX()
     {
-        source.PlayOneShot(adultWalking);
+        source.PlayOneShot(heavyfootsteps);
     }
 
-    public void PlayAdultRunSFX()
+    public void PlayLightWalkSFX()
     {
-        source.PlayOneShot(adultRunning);
+        source.PlayOneShot(lightfootsteps);
     }
 
-    public void PlayChildWalkSFX()
+    public void PlaylightRunSFX()
     {
-        source.PlayOneShot(childWalking);
-    }
-
-    public void PlayChildRunSFX()
-    {
-        source.PlayOneShot(childRunning);
+        source.PlayOneShot(lightfootstepsquick);
     }
 
     public void PlayDoorSlamSFX()
@@ -54,24 +51,40 @@ public class SFXHandler : MonoBehaviour
         source.PlayOneShot(doorCreak);
     }
 
+    public void PlayDoorBang1SFX()
+    {
+        source.PlayOneShot(doorBanging_1);
+    }
+
+    public void PlayDoorBang2SFX()
+    {
+        source.PlayOneShot(doorBanging_2);
+    }
+
     public void PlayOpenShowerCurtainSFX()
     {
-        source.PlayOneShot(openShowerCurtain);
+        source.PlayOneShot(ShowerCurtain);
     }
 
-    public void PlayCloseShowerCurtainSFX()
+    public void PlayDistortedVoice1SFX()
     {
-        source.PlayOneShot(closeShowerCurtain);
+        source.PlayOneShot(distortedVoice_1);
     }
 
-    public void PlayDistortedVoiceSFX()
+    public void PlayDistorted2VoiceSFX()
     {
-        source.PlayOneShot(distortedVoice);
+        source.PlayOneShot(distortedVoice_2);
     }
 
-    public void PlayWhisperingSFX()
+
+    public void PlayDistorted3VoiceSFX()
     {
-        source.PlayOneShot(whispering);
+        source.PlayOneShot(distortedVoice_3);
+    }
+
+    public void PlayDistorted4VoiceSFX()
+    {
+        source.PlayOneShot(distortedVoice_4);
     }
 
     public void PlayGigglingSFX()

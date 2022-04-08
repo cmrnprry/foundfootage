@@ -51,10 +51,12 @@ public class ProcessInkText : MonoBehaviour
     public GameObject comments;
 
     // Fading in to/from black
+    [Header("Fades")]
     public Image fade;
     public float fadeTime;
 
     // Audio
+    [Header("Audio")]
     public BGMHandler bgmHandler;
     public SFXHandler sfxHandler;
 
@@ -95,6 +97,10 @@ public class ProcessInkText : MonoBehaviour
 
             yield return StartCoroutine(DisplayWords(nextLine, friendTextBox));
         }
+        if (currentTags.Contains("comment"))
+        {
+            SetChoiceText(nextLine, false);
+        }
         if (currentTags.Contains("other"))
         {
             friend.SetActive(false);
@@ -132,7 +138,6 @@ public class ProcessInkText : MonoBehaviour
         typing = false;
     }
 
-
     /// <summary>
     /// Handle tags that change audio or visuals.
     /// </summary>
@@ -141,6 +146,7 @@ public class ProcessInkText : MonoBehaviour
         string[] tagArr;
         foreach (string tag in currentTags)
         {
+            print(tag);
             if (tag.StartsWith("background"))
             {
                 tagArr = tag.Split(':');
@@ -198,57 +204,60 @@ public class ProcessInkText : MonoBehaviour
 
     private void PlaySFX(string sfx)
     {
-        if (sfx == "[adultRun]")
+        print(sfx);
+        if (sfx == "light_footsteps")
         {
-            sfxHandler.PlayAdultRunSFX();
+            sfxHandler.PlayLightWalkSFX();
         }
-        else if (sfx == "[adultWalk]")
+        else if (sfx == "light_footsteps_quick")
         {
-            sfxHandler.PlayAdultWalkSFX();
+            sfxHandler.PlaylightRunSFX();
         }
-        else if (sfx == "[childWalk]")
+        else if (sfx == "heavy_footsteps")
         {
-            sfxHandler.PlayChildWalkSFX();
+            sfxHandler.PlayHeavySFX();
         }
-        else if (sfx == "[childRun]")
-        {
-            sfxHandler.PlayChildRunSFX();
-        }
-        else if (sfx == "[doorSlam]")
+        else if (sfx == "doorSlam")
         {
             sfxHandler.PlayDoorSlamSFX();
         }
-        else if (sfx == "[doorCreak]")
+        else if (sfx == "door_wood_open")
         {
             sfxHandler.PlayDoorCreakSFX();
         }
-
-        else if (sfx == "[openShowerCurtain]")
+        else if (sfx == "distortedvoices_1")
+        {
+            sfxHandler.PlayDistortedVoice1SFX();
+        }
+        else if (sfx == "distortedvoices_2")
+        {
+            sfxHandler.PlayDistorted2VoiceSFX();
+        }
+        else if (sfx == "distortedvoices_3")
+        {
+            sfxHandler.PlayDistorted3VoiceSFX();
+        }
+        else if (sfx == "distortedvoices_4")
+        {
+            sfxHandler.PlayDistorted4VoiceSFX();
+        }
+        else if (sfx == "curtain")
         {
             sfxHandler.PlayOpenShowerCurtainSFX();
         }
-
-        else if (sfx == "[closeShowerCurtain]")
+        else if (sfx == "door_banging_1")
         {
-            sfxHandler.PlayCloseShowerCurtainSFX();
+            sfxHandler.PlayDoorBang1SFX();
         }
-
-        else if (sfx == "[distortedVoice]")
+        else if (sfx == "door_banging_2")
         {
-            sfxHandler.PlayDistortedVoiceSFX();
+            sfxHandler.PlayDoorBang2SFX();
         }
-
-        else if (sfx == "[whispering]")
-        {
-            sfxHandler.PlayWhisperingSFX();
-        }
-
-        else if (sfx == "[giggling]")
+        else if (sfx == "laugh")
         {
             sfxHandler.PlayGigglingSFX();
         }
-
-        else if (sfx == "[shuffling]")
+        else if (sfx == "shuffle")
         {
             sfxHandler.PlayShufflingSFX();
         }
@@ -352,25 +361,20 @@ public class ProcessInkText : MonoBehaviour
         return choice;
     }
 
-    private void SetChoiceText(string text)
+    private void SetChoiceText(string text, bool isYou = true)
     {
+        print("here");
         TextMeshProUGUI choice = Instantiate(textPrefab) as TextMeshProUGUI;
 
         choice.transform.SetParent(textSpawnLayout, false);
         choice.transform.SetAsFirstSibling();
-        choice.text = "You: " + text;
+        choice.text = (isYou) ? ("You: " + text) : text;
     }
 
     // Gets next story line if possible
     private string GetNextStoryBlock()
     {
         return story.canContinue ? story.Continue() : "";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ClickToProgress()

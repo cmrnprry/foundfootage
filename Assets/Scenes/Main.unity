@@ -496,7 +496,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -606,18 +606,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc9609f0de152943877b7d685ddade1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adultWalking: {fileID: 0}
-  adultRunning: {fileID: 0}
-  childWalking: {fileID: 0}
-  childRunning: {fileID: 0}
-  doorSlam: {fileID: 0}
-  doorCreak: {fileID: 0}
-  openShowerCurtain: {fileID: 0}
-  closeShowerCurtain: {fileID: 0}
-  distortedVoice: {fileID: 0}
-  whispering: {fileID: 0}
-  giggling: {fileID: 0}
-  shuffling: {fileID: 0}
+  heavyfootsteps: {fileID: 8300000, guid: 22dabcb430cff134d9b7c7a01f252547, type: 3}
+  lightfootsteps: {fileID: 8300000, guid: eeb4ef9df6ae3a54d81e1f3533d5b426, type: 3}
+  lightfootstepsquick: {fileID: 8300000, guid: d76d708b26fb8e847a526e38a295b7bc, type: 3}
+  doorSlam: {fileID: 8300000, guid: 304d19056a6ce624c8d81c7d41ba1898, type: 3}
+  doorCreak: {fileID: 8300000, guid: 7774f12d59feb574996118d8e9173402, type: 3}
+  doorBanging_1: {fileID: 8300000, guid: 7e6c5500e345e894195697721aff268a, type: 3}
+  doorBanging_2: {fileID: 8300000, guid: db942019fd0f4ce4cbc717cead44bb67, type: 3}
+  ShowerCurtain: {fileID: 8300000, guid: c28fc68d7e16d5c4baabc3ad4d20d720, type: 3}
+  distortedVoice_1: {fileID: 8300000, guid: ce327be8b82c71b49b1d9ff9eed1b739, type: 3}
+  distortedVoice_2: {fileID: 8300000, guid: 59e63aaae31dd9841b6255c23af83419, type: 3}
+  distortedVoice_3: {fileID: 8300000, guid: 76f4d8249be477b4b9533ee908b7afe3, type: 3}
+  distortedVoice_4: {fileID: 8300000, guid: 46a07612f7f7aa747b38e51317e7e46d, type: 3}
+  giggling: {fileID: 8300000, guid: 8ade81ac591de4d46a10957c56cdcea3, type: 3}
+  shuffling: {fileID: 8300000, guid: a4340ae86da733c4ba4368fa7674502d, type: 3}
 --- !u!1 &474427006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,7 +6702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1,253
+  m_text: 143
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7081,7 +7083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgm: {fileID: 8300000, guid: 421ccdefe9460754e9908701c33716c0, type: 3}
-  maxVolume: 0.65
+  maxVolume: 0.1
 --- !u!1 &1551940024
 GameObject:
   m_ObjectHideFlags: 0
@@ -7806,7 +7808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1893504331
 MonoBehaviour:
   m_ObjectHideFlags: 0
